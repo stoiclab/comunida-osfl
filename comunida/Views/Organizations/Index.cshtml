@@ -4,50 +4,66 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<style>
+    .card {
+        border: 2px solid #d2d2d2;
+        padding: 6px;
+        border-radius: 2px;
+        background: #ffffff;
+        box-shadow: 0px 0px 6px #e6e6e6;
+    }
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Description)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Website)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Requirements)
-                </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Website)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Requirements)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    .card-title {
+        margin-bottom: 2px;
+        margin-top: 10px;
+    }
+
+    .card-text {
+        margin-bottom: 5px;
+    }
+
+    .card-footer {
+        margin-top: 5px;
+        padding-top: 5px;
+        border-top: 1px solid #d2d2d2;
+    }
+
+    .content-header {
+        margin: 25px 0px;
+    }
+</style>
+
+<h2>Organizaciones</h2>
+
+<div class="content-header clearfix">
+    <h3 class="pull-left" style="margin-top: 0px;">
+        Directorio - Organizaciones
+    </h3>
+    <a class="btn btn-primary pull-right" asp-action="Create">Crear Organizaci&oacute;n</a>
+</div>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+            <div class="card">
+                <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif" style="max-height: 246px; margin: 0 auto; display: table;">
+                <div class="card-block">
+                    <h4 class="card-title">@item.Name</h4>
+                    <div class="card-text">
+                        @item.Description
+                    </div>
+                    <span><a href="@item.Website">@item.Website</a></span>
+                </div>
+                <div class="card-footer">
+                    <div class="meta">
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

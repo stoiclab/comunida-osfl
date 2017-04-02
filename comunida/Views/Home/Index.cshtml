@@ -1,7 +1,49 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
 
+    .headerwrap {
+        background: url('../images/comunida-bg.jpg') no-repeat center top;
+        padding-top: 120px;
+        text-align: center;
+        background-attachment: relative;
+        background-position: center center;
+        height: 100vh;
+        width: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .logo-big {
+        background: url('../images/logo-white.png') no-repeat center top;
+        height: 126px;
+        margin: 24% auto;
+    }
+
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    @@media screen and (max-width: 769px)    {
+        .logo-big {
+            margin: 50% auto;
+        }
+    }
+
+</style>
+
+<div class="headerwrap" id="home" name="home">
+    <header class="clearfix">
+        <div class="logo-big"></div>
+    </header>
+</div>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

@@ -11,6 +11,53 @@
   <PropertyGroup>
     <UserSecretsId>aspnet-comunida-30d6c301-538f-4dbe-bd10-dcabb29b9014</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\images\comunida-bg.jpg" />
+    <Content Include="wwwroot\images\logo-white.png" />
+    <Content Include="wwwroot\js\bootstrap-datepicker.js" />
+    <Content Include="wwwroot\js\bootstrap-select.js" />
+    <Content Include="wwwroot\js\ct-paper-checkbox.js" />
+    <Content Include="wwwroot\js\ct-paper-radio.js" />
+    <Content Include="wwwroot\js\ct-paper.js" />
+    <Content Include="wwwroot\scss\bootstrap-3-card\.editorconfig" />
+    <Content Include="wwwroot\scss\bootstrap-3-card\bower.json" />
+    <Content Include="wwwroot\scss\bootstrap-3-card\LICENSE" />
+    <Content Include="wwwroot\scss\bootstrap-3-card\package.json" />
+    <Content Include="wwwroot\scss\bootstrap-3-card\sass\_card.scss" />
+    <Content Include="wwwroot\scss\ct-paper.scss" />
+    <Content Include="wwwroot\scss\ct-paper\.DS_Store" />
+    <Content Include="wwwroot\scss\ct-paper\mixins\_buttons.scss" />
+    <Content Include="wwwroot\scss\ct-paper\mixins\_inputs.scss" />
+    <Content Include="wwwroot\scss\ct-paper\mixins\_labels.scss" />
+    <Content Include="wwwroot\scss\ct-paper\mixins\_navbars.scss" />
+    <Content Include="wwwroot\scss\ct-paper\mixins\_tabs.scss" />
+    <Content Include="wwwroot\scss\ct-paper\mixins\_transparency.scss" />
+    <Content Include="wwwroot\scss\ct-paper\mixins\_vendor-prefixes.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_alerts.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_buttons.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_carousel.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_checkbox-radio.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_collapse.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_datepicker.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_dropdown.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_images.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_inputs.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_labels.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_misc.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_mixins.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_modal.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_navbars.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_progress-bars.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_responsive.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_sections.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_sliders.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_tabs-navs-pagination.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_tooltips-and-popovers.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_typography.scss" />
+    <Content Include="wwwroot\scss\ct-paper\_variables.scss" />
+    <Content Include="wwwroot\videos\videocolor.mp4" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
@@ -39,5 +86,4 @@
     <Folder Include="Views\People\" />
     <Folder Include="Views\People\" />
   </ItemGroup>
-
 </Project>
