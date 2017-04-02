@@ -18,7 +18,7 @@ namespace comunida.Data
         public DbSet<Organization> Organizations { get; set; }
         public DbSet<Calendar> Calendars { get; set; }
         public DbSet<Interest> Interests { get; set; }
-
+        public DbSet<PersonOrganizationInterest> UserOrganizationInterest { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -31,5 +31,10 @@ namespace comunida.Data
             builder.Entity<Calendar>().ToTable("Calendar");
             builder.Entity<Interest>().ToTable("Interest");
         }
+
+        public DbSet<comunida.Models.Person> Person { get; set; }
+
+
+        
     }
 }

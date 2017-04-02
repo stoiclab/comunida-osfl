@@ -12,6 +12,6 @@ namespace comunida.Models
         public string Description { get; set; }
 
         public Organization Organization { get; set; }
-        public ApplicationUser User { get; set; }
+        public Person Person { get; set; }
     }
 }
