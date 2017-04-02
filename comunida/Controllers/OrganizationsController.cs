@@ -54,7 +54,7 @@ namespace comunida.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Description,Website")] Organization organization)
+        public async Task<IActionResult> Create([Bind("ID,Name,Description,Website,Requirements")] Organization organization)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace comunida.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Description,Website")] Organization organization)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Description,Website,Requirements")] Organization organization)
         {
             if (id != organization.ID)
             {

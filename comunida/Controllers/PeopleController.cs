@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using comunida.Data;
 using comunida.Models;
+using comunida.ViewModels;
 
 namespace comunida.Controllers
 {
@@ -46,6 +47,19 @@ namespace comunida.Controllers
         // GET: People/Create
         public IActionResult Create()
         {
+            //var interests =  _context.Interests.ToList();
+            //var multiInterestsList = new MultiSelectList(interests, "ID", “Name”, selectedValues);
+            // fetch the items from some data source
+            var interests = _context.Interests.ToList();
+            //var model = new InterestsViewModel
+            //{
+            //    Items = interests.Select(x => new SelectListItem
+            //    {
+            //        Value = x.ID.ToString(),
+            //        Text = "item " + x.Name
+            //    })
+            //};
+            ViewBag.interests = interests;
             return View();
         }
 
@@ -54,11 +68,14 @@ namespace comunida.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,UserId")] Person person)
+        public async Task<IActionResult> Create([Bind("ID,name,last_name,telephone,email,about,availability,city,country,state,UserId")] Person person)
         {
             if (ModelState.IsValid)
             {
+                var interests = this.Request.Form["interests"];
                 _context.Add(person);
+
+                Console.WriteLine(interests);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
@@ -86,7 +103,7 @@ namespace comunida.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,UserId")] Person person)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,name,last_name,telephone,email,about,availability,city,country,state,UserId")] Person person)
         {
             if (id != person.ID)
             {

@@ -8,9 +8,10 @@ using comunida.Data;
 namespace comunida.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170402040723_organization-requirements")]
+    partial class organizationrequirements
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
@@ -51,6 +52,8 @@ namespace comunida.Data.Migrations
 
                     b.Property<string>("PasswordHash");
 
+                    b.Property<int?>("PersonID");
+
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
@@ -72,6 +75,8 @@ namespace comunida.Data.Migrations
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
                         .HasName("UserNameIndex");
+
+                    b.HasIndex("PersonID");
 
                     b.ToTable("AspNetUsers");
                 });
@@ -162,24 +167,6 @@ namespace comunida.Data.Migrations
                     b.Property<int?>("PersonOrganizationInterestId");
 
                     b.Property<int>("UserId");
-
-                    b.Property<string>("about");
-
-                    b.Property<string>("availability");
-
-                    b.Property<string>("city");
-
-                    b.Property<string>("country");
-
-                    b.Property<string>("email");
-
-                    b.Property<string>("last_name");
-
-                    b.Property<string>("name");
-
-                    b.Property<string>("state");
-
-                    b.Property<string>("telephone");
 
                     b.HasKey("ID");
 
@@ -309,6 +296,13 @@ namespace comunida.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("comunida.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("comunida.Models.Person")
+                        .WithMany("User")
+                        .HasForeignKey("PersonID");
                 });
 
             modelBuilder.Entity("comunida.Models.Calendar", b =>

@@ -5,15 +5,13 @@ using System.Threading.Tasks;
 
 namespace comunida.Models
 {
-    public class Interest
+    public class PersonInterest
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string PersonID { get; set; }
+        public string InterestId { get; set; }
 
-        public Organization Organization { get; set; }
+        public Interest Interest { get; set; }
         public Person Person { get; set; }
     }
-
-
 }
