@@ -8,17 +8,17 @@ namespace comunida.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_AspNetUsers_Person_PersonID",
-                table: "AspNetUsers");
+            //migrationBuilder.DropForeignKey(
+            //    name: "FK_AspNetUsers_Person_PersonID",
+            //    table: "AspNetUsers");
 
-            migrationBuilder.DropIndex(
-                name: "IX_AspNetUsers_PersonID",
-                table: "AspNetUsers");
+            //migrationBuilder.DropIndex(
+            //    name: "IX_AspNetUsers_PersonID",
+            //    table: "AspNetUsers");
 
-            migrationBuilder.DropColumn(
-                name: "PersonID",
-                table: "AspNetUsers");
+            //migrationBuilder.DropColumn(
+            //    name: "PersonID",
+            //    table: "AspNetUsers");
 
             migrationBuilder.AddColumn<string>(
                 name: "about",
@@ -104,23 +104,23 @@ namespace comunida.Data.Migrations
                 name: "telephone",
                 table: "Person");
 
-            migrationBuilder.AddColumn<int>(
-                name: "PersonID",
-                table: "AspNetUsers",
-                nullable: true);
+            //migrationBuilder.AddColumn<int>(
+            //    name: "PersonID",
+            //    table: "AspNetUsers",
+            //    nullable: true);
 
-            migrationBuilder.CreateIndex(
-                name: "IX_AspNetUsers_PersonID",
-                table: "AspNetUsers",
-                column: "PersonID");
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_AspNetUsers_PersonID",
+            //    table: "AspNetUsers",
+            //    column: "PersonID");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_AspNetUsers_Person_PersonID",
-                table: "AspNetUsers",
-                column: "PersonID",
-                principalTable: "Person",
-                principalColumn: "ID",
-                onDelete: ReferentialAction.Restrict);
+            //migrationBuilder.AddForeignKey(
+            //    name: "FK_AspNetUsers_Person_PersonID",
+            //    table: "AspNetUsers",
+            //    column: "PersonID",
+            //    principalTable: "Person",
+            //    principalColumn: "ID",
+            //    onDelete: ReferentialAction.Restrict);
         }
     }
 }

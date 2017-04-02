@@ -20,7 +20,7 @@
     .logo-big {
         background: url('../images/logo-white.png') no-repeat center top;
         height: 126px;
-        margin: 24% auto;
+        margin: 21% auto;
     }
 
     .container {
@@ -37,6 +37,12 @@
         }
     }
 
+    @@media screen and (max-width: 769px) {
+        .logo-big {
+            margin: 50% auto;
+        }
+    }
+
 </style>
 
 <div class="headerwrap" id="home" name="home">
@@ -44,107 +50,50 @@
         <div class="logo-big"></div>
     </header>
 </div>
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet, Bower, and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+
+
+<div class="row clearfix text-center" style="height: 250px; padding: 20px; background: #e0e0e0; color: #8a8a8a;">
+   <h2>Inspira jóvenes, conecta con mentores</h2>
+    <p>
+        Comunidá es una plataforma que facilita el pareo, contacto y coordinación entre mentores y organizaciones sin fines de lucro que trabajan con jóvenes de Puerto Rico. En esta plataforma encontrarás información centralizada acerca de las necesidades de las OSFL que representan jóvenes en riesgo y los intereses y competencias de profesionales interesados en el voluntariado. Con Comunidá, podrás coordinar actividades de mentoría fácilmente, de acuerdo a tu disponibilidad.
+        ¡Unamos nuestras comunidades al facilitar la inspiración mutua!
+    </p>
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518004">Bower</a> for managing client-side libraries</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+<div class="row clearfix" style="height: 250px; padding: 20px; border-top: 4px solid #e0e0e0;">
+    <div class="col-sm-12 col-md-6">
+        <img src="../images/boy.png" style="display: table; margin: 39px auto;">
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699318">Add client packages using Bower.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
+
+    <div class="col-sm-12 col-md-6">
+        <div style="display: table; margin: 0 auto;">
+            <h2>Mentores</h2>
+            <p>
+                ¡Ayúdanos a inspirar juventud puertorriqueña! Tienes interés de crear lazos con jóvenes en la isla? Quieres compartir conocimiento y destrezas con mentes en desarrollo? ¡Intégrate a tu comunidad al participar de programas de mentoría de organizaciones locales!
+
+                Con Comunidá podrás enterarte de organizaciones que trabajan con jovenes en riesgo dentro de Puerto Rico que sean compatibles con tus intereses. Aquí encontrarás diversas oportunidades de mentoría que provean experiencias gratificantes y cumplan tus requisitos de disponibilidad y localizacion.
+            </p>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
+</div>
+<div class="row clearfix" style="height: 250px; padding: 20px; border-top: 4px solid #e0e0e0;">
+    <div class="col-sm-12 col-md-6">
+        <div style="display: table; margin: 0 auto;">
+            <h2>Organizaciones</h2>
+            <p>
+                Aqui podras reclutar mentores que cumplan tus requisitos y coordinar eventos y trabajo voluntario.  
+            </p>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>Run & Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
+    <div class="col-sm-12 col-md-6">
+        <img src="../images/couple.png" style="display: table; margin: 39px auto;">
+    </div>
+</div>
+<div class="row clearfix" style="height: 250px; padding: 20px; border-top: 4px solid #e0e0e0;">
+    <div class="col-sm-12 text-center">
+        <h2>Creemos lazos comunitarios, inspiremos juventud</h2>
+        <p>
+            Al conectar jóvenes puertorriqueños con mentores de forma estratégica... ¡nos beneficiamos todos! El objetivo de Comunidá es conectar e integrar miembros de diferentes comunidades al remover obstáculos que limitan dichas relaciones. Al promover interacciones entre jóvenes y mentores, promovemos influencias positivas para los jóvenes, experiencias enriquecedores para los mentores y un mejor futuro para Puerto Rico.   
+        </p>
     </div>
 </div>

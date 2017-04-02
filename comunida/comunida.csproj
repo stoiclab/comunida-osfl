@@ -13,8 +13,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\images\boy.png" />
     <Content Include="wwwroot\images\comunida-bg.jpg" />
+    <Content Include="wwwroot\images\comunida-white-word.png" />
+    <Content Include="wwwroot\images\couple.png" />
+    <Content Include="wwwroot\images\library-1.png" />
     <Content Include="wwwroot\images\logo-white.png" />
+    <Content Include="wwwroot\images\mentor.png" />
+    <Content Include="wwwroot\images\nicholas-swanson-56.jpg" />
     <Content Include="wwwroot\js\bootstrap-datepicker.js" />
     <Content Include="wwwroot\js\bootstrap-select.js" />
     <Content Include="wwwroot\js\ct-paper-checkbox.js" />

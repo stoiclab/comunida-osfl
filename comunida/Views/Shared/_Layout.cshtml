@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - comunidá</title>
+    <title>@ViewData["Title"] - Comunidá</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -30,15 +30,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">comunida</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                    <img src="~/images/comunida-white-word.png" style="height: 22px;" />
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Interests" asp-action="Index">Interests</a></li>
-                    <li><a asp-area="" asp-controller="Organizations" asp-action="Index">Organizations</a></li>
-                    <li><a asp-area="" asp-controller="People" asp-action="Index">Mentors</a></li>
+                    <li><a asp-area="" asp-controller="Interests" asp-action="Index">Intereses</a></li>
+                    <li><a asp-area="" asp-controller="Organizations" asp-action="Index">Organizaciones</a></li>
+                    <li><a asp-area="" asp-controller="People" asp-action="Index">Mentores</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
@@ -48,7 +49,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - comunida</p>
+            <p>&copy; 2017 - Comuni<b>dá</b></p>
         </footer>
     </div>
 
